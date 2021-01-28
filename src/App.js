@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 import data from "./data.json";
 import Article from "./article/article";
 

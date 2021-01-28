@@ -1,21 +1,14 @@
 import React, { useState } from "react";
 // import data from "../data.json";
 import Typography from "@material-ui/core/Typography";
-import Container from "@material-ui/core/Container";
 import Paper from "@material-ui/core/Paper";
 import { makeStyles } from "@material-ui/core/styles";
-import MenuIcon from "@material-ui/icons/Menu";
-import SearchIcon from "@material-ui/icons/Search";
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
 import Button from "@material-ui/core/Button";
-import Box from "@material-ui/core/Box";
-import Grid from "@material-ui/core/Grid";
 import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
-import ListItemIcon from "@material-ui/core/ListItemIcon";
 import ListItemText from "@material-ui/core/ListItemText";
-import ListSubheader from "@material-ui/core/ListSubheader";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -107,7 +100,7 @@ const ArticleList = (props) => {
       </Paper>
     );
   };
-  const filterMostRecent = (sortBy = "desc") => {
+  const filterMostRecent = () => {
     let list = articleList.filterList.sort(function (a, b) {
       return new Date(b.date).getTime() - new Date(a.date).getTime();
     });
@@ -117,7 +110,7 @@ const ArticleList = (props) => {
     }));
     return list;
   };
-  const filterMostUpvoted = (sortBy = "desc") => {
+  const filterMostUpvoted = () => {
     let list = articleList.filterList.sort(
       (a, b) => parseFloat(b.upVotes) - parseFloat(a.upVotes)
     );
