@@ -2,7 +2,7 @@
 Create a basic article sorting application
 # Getting Started with Create React App
 This Project consist Article List in which each article have its own Details.
-Header consist Buttons which cand be used to sort the Article List as required.
+Header consist Buttons which can be used to sort the Article List as required.
 ## Available Scripts
 In the project directory, you can run:
 ### `yarn start`
